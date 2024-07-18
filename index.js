@@ -15,7 +15,7 @@ const urlBase = process.env.URL_BASE || '/api';
 
 // Configurar CORS
 app.use(cors({
-  origin: '/', // Permitir solo desde localhost:3000
+  origin: '*', // Permitir solo desde localhost:3000
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Permitir metodos utilizados en el proyecto
   allowedHeaders: ['Content-Type'], // Permitir solo el header Content-Type
 }));

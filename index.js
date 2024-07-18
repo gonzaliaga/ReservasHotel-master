@@ -11,15 +11,14 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
-const urlBase = process.env.URL_BASE || '/api';
+const urlBase = '/api';
 
 // Configurar CORS
 app.use(cors({
-  origin: '*', // Permitir solo desde localhost:3000
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Permitir metodos utilizados en el proyecto
+  origin: '*', // Permitir todos los orígenes temporalmente para pruebas
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Permitir métodos utilizados en el proyecto
   allowedHeaders: ['Content-Type'], // Permitir solo el header Content-Type
 }));
-
 
 // Middleware
 app.use(express.json());
